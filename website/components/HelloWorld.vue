@@ -31,13 +31,19 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+    <OriTest></OriTest>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
+import { OriTest } from '../../lib/OriUi.umd.min';
 
-@Component
+@Component({
+  components: {
+    OriTest,
+  },
+})
 export default class HelloWorld extends Vue {
   @Prop() private msg!: string;
 }
