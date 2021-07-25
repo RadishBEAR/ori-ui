@@ -31,5 +31,5 @@ module.exports = {
       libraryExport: 'default',
     },
   },
-  publicPath: './',
+  publicPath: process.env.NODE_ENV === 'production' ? './' : '',
 };

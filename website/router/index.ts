@@ -7,8 +7,9 @@ Vue.use(VueRouter);
 const routes: Array<RouteConfig> = [
   {
     path: '/',
-    name: 'Home',
-    component: Home,
+    name: 'main',
+    // import是来自webpack（或者构建工具）的函数。返回一个Promise对象
+    component: () => import('@/layout/Layout.vue'),
   },
   {
     path: '/about',
