@@ -31,4 +31,5 @@ module.exports = {
       libraryExport: 'default',
     },
   },
+  publicPath: './',
 };
